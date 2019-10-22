@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/tools.js"></script>
+  <script src="./js/food.js"></script>
+  <script src="./js/snack.js"></script>
+  <script src="./js/game.js"></script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 800px;
+      height: 500px;
+      background: url("./image/01.jpeg");
+      position: relative;
+      margin: 0 auto;
+    }
+    .add {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 30px;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+<div id="map">
+  <div class="add"><h3>当前积分为：<span id="score">0</span></h3></div>
+</div>
+
+<script>
+  var map = document.getElementById('map')
+ var game = new Game(map)
+  game.start();
+</script>
+</body>
+</html>
